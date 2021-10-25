@@ -94,6 +94,10 @@ body {
 
 /* slider */
 
+.swiper {
+    position: relative;
+}
+
 .slide {
     position: relative;
     overflow: hidden;
@@ -156,6 +160,18 @@ body {
     background-size: cover;
 }
 
+.slide-аutumn {
+    background-image: url(../images/autumn.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.slide-vitamine {
+    background-image: url(../images/vitamine.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .slide::before {
     content: '';
     position: absolute;
@@ -169,6 +185,24 @@ body {
 }
 
 /* end slider */
+
+/* slider-buttons */
+
+.slider-buttons {
+    position: absolute;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    bottom: 46px;
+    right: 40px;
+    z-index: 9;
+}
+
+.slider-button {
+    cursor: pointer;
+}
+/* end slider-buttons */
 
 /* start promo */
 .promo {
@@ -307,24 +341,31 @@ body {
 .tag-health {
     background: #D0FD89;
 }
+
 .tag-vegetable {
     background: #AEBC41;
 }
+
 .tag-meat {
     background: #B86B78;
 }
+
 .tag-bird {
     background: #D68334;
 }
+
 .tag-fish {
     background: #CD6255;
 }
+
 .tag-kids {
     background: #FFFDBF;
 }
+
 .tag-parent {
     background: #F6FDC8;
 }
+
 .tag-holiday {
     background: #FEF7FE;
 }
@@ -442,6 +483,12 @@ body {
     color: #F37321;
 }
 
+.button-outline:hover {
+    background-color: #ffa871;
+    border: none;
+    color: #ffffff;
+}
+
 .button-center {
     display: block;
     margin:auto;
@@ -468,7 +515,7 @@ body {
 
 .cards-advantages {
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     flex-wrap: wrap;
     /* justify-content: space-between; */
     margin: -15px;
@@ -547,3 +594,82 @@ body {
     text-decoration: none;
 }
 /* end footer */
+
+@media (max-width: 1260px) {
+    .container {
+        max-width: 960px;
+    }
+
+    .search-form {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+
+    .tabs-content {
+        flex-wrap: wrap;
+    }
+
+    .tabs-card {
+        flex: 50%;
+        max-width: calc(50% - 30px);
+        height: 100%;
+    }
+    .cards-advantages{
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 992px) {
+    .container {
+        max-width: 760px;
+    }
+    .slide {
+        padding: 70px;
+    }
+    .delivery-card {
+        width: calc(50% - 30px);
+    }
+    .cards-advantages{
+        justify-content: space-around;
+    }
+    .card-advantage {
+        width: calc(50% - 30px);
+    }
+    .footer-logo {
+        margin-right: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 560px;
+    }
+    .header {
+        flex-wrap: wrap;
+    }
+    .search-form {
+        order: 5;
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    .promo {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        max-width: 90%;
+    }
+    .tabs-card {
+        max-width: 100%;
+    }
+    .card-advantage {
+        width: 100%;
+    }
+    .footer-logo {
+        width: 102px;
+    }
+}
